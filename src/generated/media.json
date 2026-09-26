@@ -1,0 +1,94 @@
+{
+  "sequences": {
+    "hero": {
+      "path": "/media/seq/hero",
+      "d": {
+        "count": 166,
+        "w": 1280,
+        "h": 720
+      },
+      "m": {
+        "count": 83,
+        "w": 720,
+        "h": 720,
+        "cropX": 0.21875
+      }
+    },
+    "unbox": {
+      "path": "/media/seq/unbox",
+      "d": {
+        "count": 192,
+        "w": 1280,
+        "h": 720
+      },
+      "m": {
+        "count": 96,
+        "w": 720,
+        "h": 720,
+        "cropX": 0.21875
+      }
+    },
+    "process": {
+      "path": "/media/seq/process",
+      "d": {
+        "count": 240,
+        "w": 1280,
+        "h": 720
+      },
+      "m": {
+        "count": 120,
+        "w": 720,
+        "h": 720,
+        "cropX": 0.21875
+      }
+    },
+    "eco": {
+      "path": "/media/seq/eco",
+      "d": {
+        "count": 192,
+        "w": 1280,
+        "h": 720
+      },
+      "m": {
+        "count": 96,
+        "w": 720,
+        "h": 720,
+        "cropX": 0.21875
+      }
+    }
+  },
+  "images": {
+    "hero_start_flat": {
+      "w": 1376,
+      "h": 768
+    },
+    "hero_end_box": {
+      "w": 1376,
+      "h": 768
+    },
+    "rigid_closed": {
+      "w": 1376,
+      "h": 768
+    },
+    "eco_start": {
+      "w": 1376,
+      "h": 768
+    },
+    "product_corrugated": {
+      "w": 1376,
+      "h": 768
+    },
+    "product_flexible": {
+      "w": 1376,
+      "h": 768
+    },
+    "product_kraft": {
+      "w": 1376,
+      "h": 768
+    },
+    "industries_flatlay": {
+      "w": 1376,
+      "h": 768
+    }
+  }
+}

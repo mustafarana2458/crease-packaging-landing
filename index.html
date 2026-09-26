@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>CREASE — Engineered to be opened.</title>
+  <meta name="description" content="CREASE is the packaging partner for brands that treat the unboxing as part of the product. Structural design, 72-hour prototypes, print, production and delivery." />
+  <meta name="theme-color" content="#0F0E0C" />
+  <meta property="og:title" content="CREASE — Engineered to be opened." />
+  <meta property="og:description" content="Packaging, precisely folded. From a sketch to one million units with one partner." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/media/img/hero_end_box-1376.webp" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <!-- Flag JS + motion preference before first paint, so no-JS and reduced-motion users never see hidden content -->
+  <script>
+    (function (d) {
+      var c = d.documentElement.classList;
+      c.add('js');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) c.add('rm');
+    })(document);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="/media/seq/hero/d/0000.webp" media="(min-aspect-ratio: 1/1)" fetchpriority="high" />
+  <link rel="preload" as="image" href="/media/seq/hero/m/0000.webp" media="(max-aspect-ratio: 1/1)" fetchpriority="high" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- 0 · PRELOADER -->
+  <div class="preloader" aria-hidden="true">
+    <svg class="preloader__dieline" viewBox="0 0 240 200" fill="none">
+      <!-- cross-shaped box blank: outline, then crease lines -->
+      <path class="pl-cut" pathLength="1" d="M80 10 H160 V50 H200 L210 60 V140 L200 150 H160 V190 H80 V150 H40 L30 140 V60 L40 50 H80 Z" />
+      <path class="pl-crease" pathLength="1" d="M80 50 H160 M80 150 H160 M80 50 V150 M160 50 V150" />
+    </svg>
+    <div class="preloader__meta mono">
+      <span>CREASE / LOADING FRAMES</span>
+      <span class="preloader__count">000</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#top" aria-label="CREASE — back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7 L12 3 L21 7 L21 17 L12 21 L3 17 Z" /><path class="accent" d="M3 7 L12 11 L21 7 M12 11 V21" /></svg>
+      <span>CREASE</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav__links mono">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#sustainability">Sustainability</a></li>
+        <li><a href="#industries">Industries</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--small" href="#quote">Request a quote <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="main">
+
+    <!-- 1 · HERO -->
+    <section class="hero seq-section" id="top" data-bg="carbon" aria-labelledby="hero-title">
+      <div class="seq-stage hero__stage">
+        <div class="seq-media">
+          <canvas class="seq-canvas" data-seq="hero" role="img" aria-label="A flat kraft cardboard blank folds itself into a finished mailer box."></canvas>
+          <img class="seq-fallback" src="/media/img/hero_start_flat-1376.webp" srcset="/media/img/hero_start_flat-800.webp 800w, /media/img/hero_start_flat-1376.webp 1376w" sizes="100vw" width="1376" height="768" alt="An unfolded kraft cardboard box blank lying flat on a dark surface." />
+        </div>
+        <div class="vignette" aria-hidden="true"></div>
+        <div class="crop-marks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+        <h1 class="hero__title display" id="hero-title">
+          <span class="hero__line hero__line--1"><span>Engineered</span></span>
+          <span class="hero__line hero__line--2"><span>to be <em>opened.</em></span></span>
+        </h1>
+
+        <p class="hero__lede">Packaging, precisely folded. From a sketch to one million units, with one partner.</p>
+
+        <ul class="hero__specs mono" aria-label="Board specification">
+          <li style="--x: 13%; --y: 55%">E-FLUTE · 1.5 MM</li>
+          <li class="is-right" style="--x: 87%; --y: 55%">KRAFT 150 GSM</li>
+          <li style="--x: 13%; --y: 63%">FEFCO 0427</li>
+          <li class="is-right" style="--x: 87%; --y: 63%">TOL. ± 0.5 MM</li>
+        </ul>
+
+        <div class="hero__scroll mono" aria-hidden="true"><span>Scroll</span><i></i></div>
+        <div class="hero__meta mono" aria-hidden="true">
+          <span>EST. 2009</span><span>4 PLANTS · 38 COUNTRIES</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · MANIFESTO -->
+    <section class="manifesto section" id="about" data-bg="carbon" aria-labelledby="manifesto-label">
+      <div class="container">
+        <p class="eyebrow mono" id="manifesto-label">(01) Manifesto</p>
+        <p class="manifesto__text display" data-fill>
+          The first thing your customer touches isn’t your product. It’s the box. We engineer the moment between the knife and the smile: board with memory, lids that sigh, creases that land within half a millimetre. Every box built like a product, finished like a gift.
+        </p>
+        <div class="crease-line" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+
+    <!-- 3 · PRODUCT LINES -->
+    <section class="products" id="products" data-bg="graphite" aria-labelledby="products-title">
+      <div class="products__pin">
+        <header class="products__head container">
+          <p class="eyebrow mono">(02) Product lines</p>
+          <h2 class="h2 display" id="products-title" data-split>Four materials. <em>One standard.</em></h2>
+          <p class="products__progress mono" aria-hidden="true"><span class="products__current">01</span> / 04</p>
+        </header>
+
+        <div class="products__track">
+          <article class="card" data-cursor="view">
+            <div class="card__media">
+              <img src="/media/img/product_corrugated-1376.webp" srcset="/media/img/product_corrugated-800.webp 800w, /media/img/product_corrugated-1376.webp 1376w" sizes="(max-width: 767px) 86vw, 44vw" width="1376" height="768" loading="lazy" decoding="async" style="--pos: 58% 50%" alt="A stack of three kraft corrugated shipping boxes, the front one open to show its flute structure." />
+            </div>
+            <div class="card__body">
+              <p class="mono card__index">01 · Corrugated</p>
+              <h3 class="card__title display">Built to travel.</h3>
+              <p class="card__text">Custom shipping and mailer boxes, retail-ready displays, made to survive the courier and still look intentional on the doorstep.</p>
+              <dl class="card__spec mono">
+                <div><dt>Flutes</dt><dd>E · B · C</dd></div>
+                <div><dt>Board</dt><dd>1.5 – 4 MM</dd></div>
+                <div><dt>MOQ</dt><dd>500</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card" data-cursor="view">
+            <div class="card__media">
+              <img src="/media/img/rigid_closed-1376.webp" srcset="/media/img/rigid_closed-800.webp 800w, /media/img/rigid_closed-1376.webp 1376w" sizes="(max-width: 767px) 86vw, 44vw" width="1376" height="768" loading="lazy" decoding="async" style="--pos: 22% 50%" alt="A charcoal soft-touch rigid gift box with a thin red foil line around the lid." />
+            </div>
+            <div class="card__body">
+              <p class="mono card__index">02 · Rigid</p>
+              <h3 class="card__title display">Heavy on purpose.</h3>
+              <p class="card__text">Luxury rigid boxes with magnetic closures, soft-touch lamination, hot-foil and blind embossing. The weight in the hand is the message.</p>
+              <dl class="card__spec mono">
+                <div><dt>Board</dt><dd>1.2 – 3 MM GREYBOARD</dd></div>
+                <div><dt>Finish</dt><dd>SOFT-TOUCH · FOIL</dd></div>
+                <div><dt>MOQ</dt><dd>300</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card" data-cursor="view">
+            <div class="card__media">
+              <img src="/media/img/product_flexible-1376.webp" srcset="/media/img/product_flexible-800.webp 800w, /media/img/product_flexible-1376.webp 1376w" sizes="(max-width: 767px) 86vw, 44vw" width="1376" height="768" loading="lazy" decoding="async" style="--pos: 72% 50%" alt="Three stand-up pouches in bone white, kraft and charcoal." />
+            </div>
+            <div class="card__body">
+              <p class="mono card__index">03 · Flexible</p>
+              <h3 class="card__title display">Soft, not flimsy.</h3>
+              <p class="card__text">Printed stand-up pouches, sachets and flow-wrap. Matte against gloss, spot-UV you can feel, zips that close the same way on the hundredth use.</p>
+              <dl class="card__spec mono">
+                <div><dt>Formats</dt><dd>POUCH · SACHET · FLOW</dd></div>
+                <div><dt>Finish</dt><dd>MATTE · SPOT-UV</dd></div>
+                <div><dt>MOQ</dt><dd>2 000</dd></div>
+              </dl>
+            </div>
+          </article>
+
+          <article class="card" data-cursor="view">
+            <div class="card__media">
+              <img src="/media/img/product_kraft-1376.webp" srcset="/media/img/product_kraft-800.webp 800w, /media/img/product_kraft-1376.webp 1376w" sizes="(max-width: 767px) 86vw, 44vw" width="1376" height="768" loading="lazy" decoding="async" style="--pos: 50% 50%" alt="An eco set in unbleached kraft: a carton, a moulded pulp tray and a mailer tied with twine." />
+            </div>
+            <div class="card__body">
+              <p class="mono card__index">04 · Kraft / Eco</p>
+              <h3 class="card__title display">Honest material.</h3>
+              <p class="card__text">FSC-certified kraft, moulded pulp and mono-material formats. Curbside-recyclable or compostable, and still good enough to keep.</p>
+              <dl class="card__spec mono">
+                <div><dt>Fibre</dt><dd>FSC · 100% RECYCLABLE</dd></div>
+                <div><dt>Inserts</dt><dd>MOULDED PULP</dd></div>
+                <div><dt>MOQ</dt><dd>500</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · THE UNBOXING -->
+    <section class="unbox seq-section" id="unboxing" data-bg="carbon" aria-labelledby="unbox-title">
+      <div class="seq-stage unbox__stage">
+        <div class="seq-media">
+          <canvas class="seq-canvas" data-seq="unbox" role="img" aria-label="The lid of a charcoal rigid gift box lifts away, revealing tissue paper sealed with a red sticker and a moulded kraft cradle."></canvas>
+          <img class="seq-fallback" src="/media/img/rigid_closed-1376.webp" srcset="/media/img/rigid_closed-800.webp 800w, /media/img/rigid_closed-1376.webp 1376w" sizes="100vw" width="1376" height="768" loading="lazy" alt="A closed charcoal rigid gift box." />
+          <ol class="hotspots" aria-label="Details of the rigid box">
+            <li class="hotspot hotspot--left" data-in="0.02" data-out="0.30" data-track="0,0.41,0.74 0.37,0.41,0.76 0.63,0.40,0.77 1,0.40,0.80">
+              <span class="hotspot__dot"><b class="mono">1</b></span><span class="hotspot__line"></span>
+              <span class="hotspot__label"><strong class="mono">Magnetic closure</strong><span>Two N35 magnets, hidden under the wrap. A soft click, no ribbon.</span></span>
+            </li>
+            <li class="hotspot" data-in="0.02" data-out="0.18" data-track="0,0.66,0.57 0.18,0.66,0.52">
+              <span class="hotspot__dot"><b class="mono">2</b></span><span class="hotspot__line"></span>
+              <span class="hotspot__label"><strong class="mono">Soft-touch lamination</strong><span>A velvet matte film that warms under the thumb.</span></span>
+            </li>
+            <li class="hotspot" data-in="0.33" data-out="0.64" data-track="0.3,0.49,0.575 0.37,0.49,0.58 0.5,0.485,0.55 0.63,0.48,0.51 0.7,0.48,0.47">
+              <span class="hotspot__dot"><b class="mono">3</b></span><span class="hotspot__line"></span>
+              <span class="hotspot__label"><strong class="mono">Hot-foil seal</strong><span>Vermilion foil, pressed at 120 °C. The only colour on the box.</span></span>
+            </li>
+            <li class="hotspot" data-in="0.80" data-out="1.01" data-track="0.8,0.62,0.34 1,0.64,0.38">
+              <span class="hotspot__dot"><b class="mono">4</b></span><span class="hotspot__line"></span>
+              <span class="hotspot__label"><strong class="mono">Tissue wrap</strong><span>17 GSM acid-free tissue, folded by hand, opened by instinct.</span></span>
+            </li>
+            <li class="hotspot hotspot--left" data-in="0.84" data-out="1.01" data-track="0.8,0.47,0.60 1,0.475,0.59">
+              <span class="hotspot__dot"><b class="mono">5</b></span><span class="hotspot__line"></span>
+              <span class="hotspot__label"><strong class="mono">Moulded cradle</strong><span>Pulp insert shaped to your product within 0.5 MM.</span></span>
+            </li>
+          </ol>
+        </div>
+        <div class="vignette" aria-hidden="true"></div>
+
+        <header class="unbox__head">
+          <p class="eyebrow mono">(03) The unboxing</p>
+          <h2 class="h2 display" id="unbox-title" data-split>A lid that <em>sighs.</em></h2>
+          <p class="unbox__lede">Eight seconds your customer will remember. Every one of them is specified.</p>
+        </header>
+
+        <p class="unbox__caption" aria-hidden="true"></p>
+      </div>
+    </section>
+
+    <!-- 5 · PROCESS -->
+    <section class="process seq-section" id="process" data-bg="carbon" aria-labelledby="process-title">
+      <div class="seq-stage process__stage">
+        <div class="seq-media">
+          <canvas class="seq-canvas" data-seq="process" role="img" aria-label="A slow tracking shot along a packaging line: printing press, die-cutter, folder-gluer, finished boxes."></canvas>
+          <img class="seq-fallback" src="/media/seq/process/d/0120.webp" width="1280" height="720" loading="lazy" alt="A printing press on a dimly lit packaging production line." />
+        </div>
+        <div class="vignette vignette--strong" aria-hidden="true"></div>
+
+        <div class="process__panel">
+          <p class="eyebrow mono">(04) Process</p>
+          <h2 class="h2 display" id="process-title" data-split>Sketch to <em>shipment.</em></h2>
+          <div class="process__steps">
+            <article class="step is-active">
+              <p class="mono step__num">Step 01 / 05</p>
+              <h3 class="step__title display">Design</h3>
+              <p class="step__text">Structural engineers build the dieline around your product, not the other way round. 3D renders in 48 hours.</p>
+              <p class="mono step__spec">CAD · DIELINE · 3D MOCK-UP</p>
+            </article>
+            <article class="step">
+              <p class="mono step__num">Step 02 / 05</p>
+              <h3 class="step__title display">Prototype</h3>
+              <p class="step__text">A physical sample on your desk in 72 hours: real board, real finish, cut on the same tables as production.</p>
+              <p class="mono step__spec">72 H PROTOTYPE · 3 ITERATIONS</p>
+            </article>
+            <article class="step">
+              <p class="mono step__num">Step 03 / 05</p>
+              <h3 class="step__title display">Print</h3>
+              <p class="step__text">Offset, flexo and digital under one roof, colour-managed to your brand references with a ΔE under 2.</p>
+              <p class="mono step__spec">OFFSET · FLEXO · DIGITAL · ΔE &lt; 2</p>
+            </article>
+            <article class="step">
+              <p class="mono step__num">Step 04 / 05</p>
+              <h3 class="step__title display">Produce</h3>
+              <p class="step__text">Die-cut, folded and glued on calibrated lines. Every hundredth unit is pulled and measured.</p>
+              <p class="mono step__spec">DIE-CUT · FOLD · GLUE · QC 1:100</p>
+            </article>
+            <article class="step">
+              <p class="mono step__num">Step 05 / 05</p>
+              <h3 class="step__title display">Deliver</h3>
+              <p class="step__text">Palletised, tracked and delivered to 38 countries, or split across your warehouses on a schedule.</p>
+              <p class="mono step__spec">38 COUNTRIES · 99.2% ON TIME</p>
+            </article>
+          </div>
+        </div>
+
+        <ol class="rail mono" aria-hidden="true">
+          <li class="is-active">Design</li><li>Prototype</li><li>Print</li><li>Produce</li><li>Deliver</li>
+          <span class="rail__bar"><i></i></span>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6 · SUSTAINABILITY -->
+    <section class="eco" id="sustainability" data-bg="kraft" aria-labelledby="eco-title">
+      <div class="eco__stage">
+        <div class="eco__copy">
+          <p class="eyebrow mono">(05) Sustainability</p>
+          <h2 class="h2 display" id="eco-title" data-split>Sustainable isn’t a finish. <em>It’s a structure.</em></h2>
+          <p class="eco__lede">We design out the plastic before we design in the print. What leaves our plants is built to go back to paper, or back to soil.</p>
+          <dl class="stats">
+            <div class="stat"><dt class="mono">FSC-certified fibre</dt><dd class="display"><span data-count="92">92</span>%</dd></div>
+            <div class="stat"><dt class="mono">Less plastic per unit since 2019</dt><dd class="display"><span data-count="64" data-prefix="−">−64</span>%</dd></div>
+            <div class="stat"><dt class="mono">Weeks to compost, eco line</dt><dd class="display"><span data-count="12">12</span></dd></div>
+          </dl>
+        </div>
+        <figure class="eco__frame">
+          <div class="seq-media">
+            <canvas class="seq-canvas" data-seq="eco" role="img" aria-label="A kraft box softens and returns to the soil while green seedlings grow through it."></canvas>
+            <img class="seq-fallback" src="/media/img/eco_start-1376.webp" srcset="/media/img/eco_start-800.webp 800w, /media/img/eco_start-1376.webp 1376w" sizes="(max-width: 899px) 100vw, 55vw" width="1376" height="768" loading="lazy" alt="A used kraft mailer box resting on dark soil with fallen leaves." />
+          </div>
+          <div class="crop-marks" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <figcaption class="mono">MONO-MATERIAL KRAFT · HOME COMPOSTABLE · <span class="eco__week">WEEK 00</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 7 · INDUSTRIES -->
+    <section class="industries section" id="industries" data-bg="carbon" aria-labelledby="industries-title">
+      <div class="container">
+        <p class="eyebrow mono">(06) Industries served</p>
+        <h2 class="h2 display" id="industries-title" data-split>Different shelves. <em>Same obsession.</em></h2>
+      </div>
+      <div class="industries__media" data-cursor="view">
+        <img src="/media/img/industries_flatlay-1376.webp" srcset="/media/img/industries_flatlay-800.webp 800w, /media/img/industries_flatlay-1376.webp 1376w" sizes="100vw" width="1376" height="768" loading="lazy" decoding="async" alt="Overhead flat-lay of unbranded packaging: a food carton, a coffee pouch, a cosmetics box with a serum bottle and an open e-commerce mailer." />
+      </div>
+      <ul class="industries__list container">
+        <li class="industry" tabindex="0">
+          <span class="mono industry__num">01</span>
+          <span class="industry__name display">FMCG</span>
+          <span class="mono industry__detail">Multipacks · shelf-ready trays · 10M+ unit runs</span>
+        </li>
+        <li class="industry" tabindex="0">
+          <span class="mono industry__num">02</span>
+          <span class="industry__name display">Food &amp; Beverage</span>
+          <span class="mono industry__detail">Food-contact board · grease barriers · coffee pouches</span>
+        </li>
+        <li class="industry" tabindex="0">
+          <span class="mono industry__num">03</span>
+          <span class="industry__name display">Cosmetics &amp; Beauty</span>
+          <span class="mono industry__detail">Rigid sets · foil · moulded inserts for glass</span>
+        </li>
+        <li class="industry" tabindex="0">
+          <span class="mono industry__num">04</span>
+          <span class="industry__name display">E-commerce</span>
+          <span class="mono industry__detail">Mailers · tear strips · right-sized, less void fill</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 8 · NUMBERS -->
+    <section class="numbers section" id="numbers" data-bg="bone" aria-labelledby="numbers-title">
+      <div class="container">
+        <p class="eyebrow mono" id="numbers-title">(07) In numbers</p>
+        <dl class="numbers__grid">
+          <div class="number"><dt class="mono">Units a year</dt><dd class="display"><span data-scrub-count="1.2" data-decimals="1">1.2</span>B</dd></div>
+          <div class="number"><dt class="mono">Export countries</dt><dd class="display"><span data-scrub-count="38">38</span></dd></div>
+          <div class="number"><dt class="mono">Prototype turnaround</dt><dd class="display"><span data-scrub-count="72">72</span><small> h</small></dd></div>
+          <div class="number"><dt class="mono">On-time delivery</dt><dd class="display"><span data-scrub-count="99.2" data-decimals="1">99.2</span>%</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 9 · TESTIMONIALS -->
+    <section class="quotes section" id="clients" data-bg="bone" aria-labelledby="quotes-title">
+      <div class="container">
+        <p class="eyebrow mono" id="quotes-title">(08) Clients</p>
+      </div>
+      <div class="quotes__viewport" data-cursor="drag">
+        <ul class="quotes__track">
+          <li class="quote">
+            <blockquote class="display">“Our return rate for damaged goods went to almost zero, and people started posting the box.”</blockquote>
+            <p class="mono">Head of Operations · Nord &amp; Field Coffee</p>
+          </li>
+          <li class="quote">
+            <blockquote class="display">“They sent three prototypes before we had finished the brief. The third one is on shelves in eleven countries.”</blockquote>
+            <p class="mono">Packaging Lead · Maison Oré Skincare</p>
+          </li>
+          <li class="quote">
+            <blockquote class="display">“We cut 40% of our void fill without changing a single SKU. That is the kind of maths I like.”</blockquote>
+            <p class="mono">Procurement Director · Parcel &amp; Pine</p>
+          </li>
+          <li class="quote">
+            <blockquote class="display">“The lid closes with a sound. Our customers noticed the sound.”</blockquote>
+            <p class="mono">Founder · Stillwater Tea Co.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 10 · CTA + QUOTE -->
+    <section class="cta" id="quote" data-bg="carbon" aria-labelledby="cta-title">
+      <div class="cta__bg" aria-hidden="true">
+        <img src="/media/img/hero_end_box-1376.webp" srcset="/media/img/hero_end_box-800.webp 800w, /media/img/hero_end_box-1376.webp 1376w" sizes="100vw" width="1376" height="768" loading="lazy" decoding="async" alt="" />
+      </div>
+      <div class="cta__inner container">
+        <div class="cta__copy">
+          <p class="eyebrow mono">(09) Request a quote</p>
+          <h2 class="cta__title display" id="cta-title" data-split>Let’s make something worth <em>opening.</em></h2>
+          <p class="cta__lede">Tell us what goes inside. A structural engineer replies within one working day, with a first idea and a price range.</p>
+          <p class="mono cta__badges"><span>72 H PROTOTYPE</span><span>MOQ 500</span><span>NDA ON REQUEST</span></p>
+        </div>
+
+        <form class="form" novalidate aria-describedby="form-note">
+          <div class="form__grid">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-company">Company</label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" required />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field field--wide">
+              <label for="f-email">Work email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required />
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-industry">Industry</label>
+              <select id="f-industry" name="industry" required>
+                <option value="">Select…</option>
+                <option>FMCG</option>
+                <option>Food &amp; Beverage</option>
+                <option>Cosmetics &amp; Beauty</option>
+                <option>E-commerce</option>
+                <option>Other</option>
+              </select>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="f-line">Product line</label>
+              <select id="f-line" name="line" required>
+                <option value="">Select…</option>
+                <option>Corrugated</option>
+                <option>Rigid</option>
+                <option>Flexible</option>
+                <option>Kraft / Eco</option>
+                <option>Not sure yet</option>
+              </select>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field field--wide">
+              <label for="f-qty">Quantity</label>
+              <select id="f-qty" name="quantity" required>
+                <option value="">Select…</option>
+                <option>500 – 5 000</option>
+                <option>5 000 – 50 000</option>
+                <option>50 000 – 500 000</option>
+                <option>500 000 +</option>
+              </select>
+              <p class="field__error" aria-live="polite"></p>
+            </div>
+            <div class="field field--wide">
+              <label for="f-msg">What goes inside? <span class="mono optional">Optional</span></label>
+              <textarea id="f-msg" name="message" rows="4"></textarea>
+            </div>
+          </div>
+          <div class="form__foot">
+            <p class="mono form__note" id="form-note">Demo form. Nothing is sent.</p>
+            <button class="btn" type="submit">Request a quote <span aria-hidden="true">→</span></button>
+          </div>
+
+          <div class="form__success" role="status" aria-live="polite" hidden>
+            <svg class="success-box" viewBox="0 0 120 100" aria-hidden="true">
+              <path class="sb-body" d="M20 45 H100 V90 H20 Z" />
+              <path class="sb-lid" d="M20 45 H100 L100 10 H20 Z" />
+              <path class="sb-strip" d="M20 45 H100" />
+            </svg>
+            <h3 class="display">Boxed and sealed.</h3>
+            <p>Thanks. A structural engineer will reply within one working day.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11 · FOOTER -->
+  <footer class="footer" data-bg="carbon">
+    <div class="container">
+      <div class="footer__cols">
+        <div>
+          <p class="mono footer__label">Plants</p>
+          <ul><li>Rotterdam, NL</li><li>Łódź, PL</li><li>Monterrey, MX</li><li>Penang, MY</li></ul>
+        </div>
+        <div>
+          <p class="mono footer__label">Contact</p>
+          <ul><li><a href="mailto:hello@crease.example">hello@crease.example</a></li><li><a href="tel:+31100000000">+31 10 000 0000</a></li></ul>
+        </div>
+        <div>
+          <p class="mono footer__label">Follow</p>
+          <ul><li><a href="#" rel="noopener">LinkedIn</a></li><li><a href="#" rel="noopener">Instagram</a></li><li><a href="#" rel="noopener">Behance</a></li></ul>
+        </div>
+        <div>
+          <p class="mono footer__label">Company</p>
+          <ul><li><a href="#about">About</a></li><li><a href="#process">Process</a></li><li><a href="#quote">Request a quote</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="wordmark" aria-hidden="true">
+      <span class="display">CREASE</span>
+      <svg class="wordmark__crease" viewBox="0 0 1000 100" preserveAspectRatio="none"><line x1="0" y1="62" x2="1000" y2="38" pathLength="1" /></svg>
+    </div>
+    <div class="container footer__legal mono">
+      <span>© 2026 Crease Packaging Works</span>
+      <span>Fictional brand · Portfolio project</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label mono"></span></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
