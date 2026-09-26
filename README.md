@@ -24,6 +24,8 @@ Everything is in `netlify.toml`: build `npm run build`, publish `dist/`. Connect
 Frame sequences are **pre-generated and committed** in `static/media/`, so the Netlify build does not need ffmpeg.
 Caching: hashed JS/CSS is immutable, `/media/*` is cached for 7 days.
 
+**"Powered by Netlify" badge / toolbar:** nothing in this repo injects it. If you see one on a deploy preview, branch deploy or unique deploy URL (`<hash>--<site>.netlify.app`), it is Netlify's collaboration drawer. Turn it off in the Netlify UI (Deploy Previews settings). If it still appears on the production URL in a private window, check the site's Snippet injection settings.
+
 ---
 
 ## Project structure
@@ -84,7 +86,7 @@ Stills total ≈ 0.4 MB. Audio is stripped.
 | 2 | Manifesto | SplitText words fill mute → bone (scrubbed), crease line draws |
 | 3 | Product lines | pinned horizontal scroll, clip-path unfold, counter-parallax, 3D tilt + spec reveal on hover |
 | 4 | The unboxing | pinned ~260vh, `rigid_unbox` scrub, 5 hotspots with drawn leader lines that track the objects |
-| 5 | Process | pinned ~400vh, `process_line` scrub, 5-step rail + masked copy swap |
+| 5 | Process | pinned ~400vh, `process_line` scrub; each step is tied to the footage that shows it (Design 0–23 flat creased sheets · Prototype 24–47 sheets feed into the line · Print 48–111 press rollers and units · Produce 112–191 blanks folding into boxes · Deliver 192–239 pallet stack), see `CLIP_BOUNDS` in `process.js`; 5-step rail with proportional columns; each step (label, heading, body, meta) crossfades as one unit, only one on screen at a time |
 | 6 | Sustainability | background → kraft, pinned `eco_return` in a framed canvas, stats count with scroll |
 | 7 | Industries | flat-lay clip-path reveal + parallax, hoverable giant rows |
 | 8 | Numbers | bone section, counters scrub (run backwards too) |

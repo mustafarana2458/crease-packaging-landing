@@ -227,7 +227,7 @@ html.lenis, html.lenis body { height: auto; }
 .hero__stage { isolation: isolate; }
 /* Starts above centre: the flat blank sits in the lower half of the frame */
 .hero__title {
-  position: absolute; left: 0; right: 0; top: 37%; z-index: 4;
+  position: absolute; left: 0; right: 0; top: 34%; z-index: 4;
   translate: 0 -50%;
   text-align: center;
   font-size: clamp(3.4rem, 11vw, 13rem);
@@ -415,7 +415,7 @@ html.lenis, html.lenis body { height: auto; }
 
 .rail {
   position: absolute; left: var(--pad); right: var(--pad); bottom: clamp(24px, 5vh, 52px); z-index: 4;
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 10px;
   color: var(--mute);
 }
 .rail li { padding-bottom: 14px; transition: color 0.4s; }
@@ -424,6 +424,28 @@ html.lenis, html.lenis body { height: auto; }
 .rail li.is-active { color: var(--dieline-soft); }
 .rail__bar { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: rgb(242 237 228 / 0.18); }
 .rail__bar i { position: absolute; inset: 0; background: var(--dieline); transform-origin: left; transform: scaleX(0); }
+
+/* Short landscape screens (e.g. a 1366×768 laptop minus browser chrome ≈ 657px):
+   tighten the panel so the meta line keeps clear air above the rail */
+@media (min-aspect-ratio: 1/1) and (max-height: 800px) {
+  .process__panel { top: calc(var(--nav-h) + 1.5vh); }
+  .process__panel .eyebrow { margin-bottom: 0.8rem; }
+  .process__panel .h2 { font-size: clamp(2.2rem, 7.5vh, 4.4rem); }
+  .process__steps { margin-top: clamp(14px, 3vh, 28px); }
+  .step__title { font-size: clamp(2rem, 6vh, 3rem); margin: 4px 0 8px; }
+  .step__text { font-size: 16px; line-height: 1.5; }
+  .step__spec { margin-top: 10px; }
+}
+@media (min-aspect-ratio: 1/1) and (max-height: 600px) {
+  .process__panel .eyebrow { display: none; }
+  .step__text { font-size: 15px; }
+}
+
+/* Short phones: smaller, lower video band so the step copy never sits on the footage */
+@media (max-aspect-ratio: 1/1) and (max-height: 700px) {
+  .js:not(.rm) .process .seq-stage > .seq-media { max-height: 46svh; }
+  .process.seq-section { --media-top: 66%; }
+}
 
 @media (max-aspect-ratio: 1/1) {
   .process { --media-top: 60%; }

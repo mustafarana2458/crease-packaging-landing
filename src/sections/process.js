@@ -2,6 +2,41 @@ import { gsap } from 'gsap';
 import { $, $$, isPortrait } from '../lib/utils.js';
 
 /**
+ * Where each step lives in process_line (240 desktop frames), found by viewing the frames:
+ *   Design     0–23   bare lit conveyor, flat pre-creased kraft blanks
+ *   Prototype 24–47   sheets feed into the first unit as the press comes into view
+ *   Print     48–111  press rollers close up, then the units' side frames + red status lamp
+ *   Produce  112–191  converting line: blanks lift and fold into boxes (clearest ~150–175)
+ *   Deliver  192–239  finished boxes stacked on a pallet
+ * Stored as fractions of the clip so the half-length portrait set maps the same way.
+ */
+const CLIP_BOUNDS = [0, 24, 48, 112, 192, 240].map((f) => f / 240);
+
+/**
+ * Scroll share per step: halfway between equal (20% each) and the step's share of
+ * the footage. Short scenes (Design) stay readable, and the tracking speed only
+ * varies 0.67×–1.25× between steps instead of stopping and rushing.
+ */
+const SCROLL_BOUNDS = (() => {
+  const n = CLIP_BOUNDS.length - 1;
+  const out = [0];
+  for (let i = 0; i < n; i++) {
+    const share = 0.5 / n + 0.5 * (CLIP_BOUNDS[i + 1] - CLIP_BOUNDS[i]);
+    out.push(out[i] + share);
+  }
+  out[n] = 1;
+  return out;
+})();
+
+/** scroll progress (0–1) → { step index, clip position (0–1) } */
+function mapScroll(p) {
+  let i = 0;
+  while (i < SCROLL_BOUNDS.length - 2 && p >= SCROLL_BOUNDS[i + 1]) i++;
+  const t = (p - SCROLL_BOUNDS[i]) / (SCROLL_BOUNDS[i + 1] - SCROLL_BOUNDS[i]);
+  return { step: i, clip: CLIP_BOUNDS[i] + t * (CLIP_BOUNDS[i + 1] - CLIP_BOUNDS[i]) };
+}
+
+/**
  * Pinned ~400vh. A slow tracking shot; the 5-step rail advances with scroll.
  *
  * Each .step (label + heading + body + meta) is one unit and only ever moves as
@@ -19,6 +54,10 @@ export function initProcess(seq) {
   const frame = { p: 0 };
   let active = 0;
   let swap = null;
+
+  // Rail columns follow the scroll shares, so a label lights up exactly when the bar reaches it
+  $('.rail', section).style.gridTemplateColumns = SCROLL_BOUNDS.slice(1)
+    .map((b, i) => `${(b - SCROLL_BOUNDS[i]).toFixed(4)}fr`).join(' ');
 
   gsap.set(steps, { autoAlpha: 0, y: 0 });
   gsap.set(steps[0], { autoAlpha: 1 });
@@ -64,9 +103,10 @@ export function initProcess(seq) {
   }).to(frame, {
     p: 1, duration: 1, ease: 'none',
     onUpdate: () => {
-      seq.seek(frame.p);
+      const { step, clip } = mapScroll(frame.p);
+      seq.seek(clip);
       bar.style.transform = `scaleX(${frame.p})`;
-      show(Math.min(steps.length - 1, Math.floor(frame.p * steps.length)));
+      show(step);
     },
   });
 }

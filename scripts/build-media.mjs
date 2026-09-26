@@ -30,7 +30,8 @@ const SEQUENCES = [
   // hero: cut after 165 — from 166 the lid flaps warp and the box snaps to a new angle (~180)
   { id: 'hero', file: 'hero_fold.mp4', focal: 0.5, last: 165 },
   { id: 'unbox', file: 'rigid_unbox.mp4', focal: 0.5 },
-  { id: 'process', file: 'process_line.mp4', focal: 0.5 },
+  // process: machines and the final pallet enter from the right, so the square crop leans right
+  { id: 'process', file: 'process_line.mp4', focal: 0.62 },
   { id: 'eco', file: 'eco_return.mp4', focal: 0.5 },
 ];
 
